@@ -1,0 +1,29 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.global-font {
+  font-size: 16px;
+  font-weight: normal;
+  font-family: "Microsoft YaHei", "微软雅黑", "sans-serif";
+  color: #666;
+}
+
+.global-toast,
+.global-loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 80%;
+  width: auto;
+  height: auto;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 14px;
+}
