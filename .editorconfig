@@ -1,0 +1,24 @@
+# EditorConfig 配置文件
+
+root = true
+
+[*]
+charset = utf-8                  # 文件编码，使用 UTF-8
+end_of_line = lf                 # 换行符，使用 LF
+insert_final_newline = true      # 文件末尾强制插入换行符
+trim_trailing_whitespace = true  # 删除行尾多余空白
+indent_style = space             # 缩进风格，使用空格
+indent_size = 2                  # 缩进大小为2个空格
+max_line_length = 120            # 最大行长度限制
+
+[*.md]
+trim_trailing_whitespace = false # Markdown 文件允许行尾空白
+
+[*.{js,ts,jsx,tsx,json,css,scss,html}]
+indent_size = 2                  # 前端文件缩进为2个空格
+
+[*.{py}]
+indent_size = 4                  # Python 文件缩进为4个空格
+
+[Makefile]
+indent_style = tab               # Makefile 使用制表符缩进
