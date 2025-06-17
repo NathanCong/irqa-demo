@@ -1,8 +1,8 @@
 const COS = require('cos-js-sdk-v5');
 
 const cos = new COS({
-  SecretId: 'AKID87ze5ILI9rTxGMQPDuNgnhNp33qQ1GOW',
-  SecretKey: '5ydHiv0sWw86rOhmeIo6E9qJYZMvGNGw',
+  SecretId: '<需要替换>',
+  SecretKey: '<需要替换>',
 });
 
 module.exports = (file) => {
