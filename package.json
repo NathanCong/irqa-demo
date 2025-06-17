@@ -4,7 +4,14 @@
   "description": "机器人智能问答DEMO",
   "main": "src/main.js",
   "scripts": {
-    "start": "electron src/main.js"
+    "start": "electron-forge start",
+    "clean": "rm -rf out",
+    "package": "electron-forge package",
+    "make:win32": "electron-forge make --platform=win32",
+    "make:macos": "electron-forge make --platform=darwin",
+    "make:linux": "electron-forge make --platform=linux",
+    "make:all": "electron-forge make",
+    "make": "npm run clean && npm run make:win32"
   },
   "repository": {
     "type": "git",
@@ -18,6 +25,16 @@
   "homepage": "https://github.com/NathanCong/irqa-demo#readme",
   "devDependencies": {
     "@electron-forge/cli": "^7.8.1",
+    "@electron-forge/maker-deb": "^7.8.1",
+    "@electron-forge/maker-rpm": "^7.8.1",
+    "@electron-forge/maker-squirrel": "^7.8.1",
+    "@electron-forge/maker-zip": "^7.8.1",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.8.1",
+    "@electron-forge/plugin-fuses": "^7.8.1",
+    "@electron/fuses": "^1.8.0",
     "electron": "^36.4.0"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1"
   }
 }
