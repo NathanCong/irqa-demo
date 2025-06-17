@@ -1,16 +1,25 @@
 /**
  * main.js 入口程序
  */
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron');
 const { resolve } = require('path');
 
 const createWindow = () => {
-  const browserWindow = new BrowserWindow({
+  const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    fullscreen: true,
+    webPreferences: {
+      nodeIntegration: true, // 启用 Node.js 集成
+      contextIsolation: false, // 关闭上下文隔离
+    },
   });
 
-  browserWindow.loadFile(resolve(__dirname, './index.html'));
+  if (!mainWindow.isFullScreen()) {
+    mainWindow.setFullScreen(true);
+  }
+
+  mainWindow.loadFile(resolve(__dirname, './pages/index/index.html'));
 };
 
 app.whenReady().then(() => {
@@ -21,4 +30,11 @@ app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit();
   }
+});
+
+/**
+ * 监听【退出程序】请求
+ */
+ipcMain.handle('app-quit', () => {
+  app.quit();
 });

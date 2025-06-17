@@ -5,13 +5,11 @@
   "main": "src/main.js",
   "scripts": {
     "start": "electron-forge start",
-    "clean": "rm -rf out",
     "package": "electron-forge package",
     "make:win32": "electron-forge make --platform=win32",
-    "make:macos": "electron-forge make --platform=darwin",
     "make:linux": "electron-forge make --platform=linux",
-    "make:all": "electron-forge make",
-    "make": "npm run clean && npm run make:win32"
+    "clean": "mv out /mnt/hgfs",
+    "build": "npm run make:win32 && npm run clean"
   },
   "repository": {
     "type": "git",

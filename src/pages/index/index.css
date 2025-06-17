@@ -1,0 +1,69 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.global-font {
+  font-size: 16px;
+  font-weight: normal;
+  font-family: "Microsoft YaHei", "微软雅黑", "sans-serif";
+  color: #666;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  height: 60px;
+  background-color: #ececec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.mainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.test-buttons {
+  width: 80%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.test-button {
+  width: 100%;
+  height: 60px;
+  border: none;
+  background-color: #ececec;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.test-button:active {
+  background-color: #dcdcdc;
+}
+
+.footer {
+  width: 100%;
+  height: 40px;
+  background-color: #ececec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
